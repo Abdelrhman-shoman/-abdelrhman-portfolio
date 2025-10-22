@@ -1,0 +1,35 @@
+{
+  "name": "Abdelrhman Shoman - Portfolio",
+  "short_name": "Abdelrhman",
+  "description": "Systems of Scale & Simplicity - Operations, Automation, and Intelligent Workflows",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%23ff6b35' width='192' height='192'/><text x='96' y='110' font-size='120' fill='white' text-anchor='middle' font-weight='bold'>AS</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%23ff6b35' width='512' height='512'/><text x='256' y='320' font-size='320' fill='white' text-anchor='middle' font-weight='bold'>AS</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 720'><rect fill='%230a0a0a' width='540' height='720'/><text x='270' y='360' font-size='48' fill='%23ff6b35' text-anchor='middle'>Portfolio</text></svg>",
+      "sizes": "540x720",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    }
+  ]
+}
+
