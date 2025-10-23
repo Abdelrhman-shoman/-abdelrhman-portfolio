@@ -4,16 +4,16 @@ const savedTheme = localStorage.getItem('theme');
 const isDarkMode = savedTheme ? savedTheme === 'dark' : prefersDark;
 
 if (!isDarkMode) {
-    document.documentElement.classList.add('light-mode');
+    document.body.classList.add('light-mode');
 }
 
 // ===== DARK MODE TOGGLE =====
 const darkModeToggle = document.getElementById('darkModeToggle');
 
 darkModeToggle.addEventListener('click', () => {
-    const isLight = document.documentElement.classList.toggle('light-mode');
+    const isLight = document.body.classList.toggle('light-mode');
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    darkModeToggle.textContent = isLight ? '🌙' : '☀️';
+    darkModeToggle.textContent = isLight ? '☀️' : '🌙';
 });
 
 // Set initial button text
@@ -23,10 +23,10 @@ darkModeToggle.textContent = isDarkMode ? '🌙' : '☀️';
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
     if (!localStorage.getItem('theme')) {
         if (e.matches) {
-            document.documentElement.classList.remove('light-mode');
+            document.body.classList.remove('light-mode');
             darkModeToggle.textContent = '🌙';
         } else {
-            document.documentElement.classList.add('light-mode');
+            document.body.classList.add('light-mode');
             darkModeToggle.textContent = '☀️';
         }
     }
