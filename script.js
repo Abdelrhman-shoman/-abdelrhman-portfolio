@@ -1,16 +1,35 @@
-// ===== DARK MODE TOGGLE =====
-const darkModeToggle = document.getElementById('darkModeToggle');
-const isDarkMode = localStorage.getItem('darkMode') !== 'false';
+// ===== DETECT SYSTEM PREFERENCE & INITIALIZE THEME =====
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const savedTheme = localStorage.getItem('theme');
+const isDarkMode = savedTheme ? savedTheme === 'dark' : prefersDark;
 
 if (!isDarkMode) {
     document.documentElement.classList.add('light-mode');
-    darkModeToggle.textContent = '☀️';
 }
+
+// ===== DARK MODE TOGGLE =====
+const darkModeToggle = document.getElementById('darkModeToggle');
 
 darkModeToggle.addEventListener('click', () => {
     const isLight = document.documentElement.classList.toggle('light-mode');
-    localStorage.setItem('darkMode', !isLight);
-    darkModeToggle.textContent = isLight ? '☀️' : '🌙';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    darkModeToggle.textContent = isLight ? '🌙' : '☀️';
+});
+
+// Set initial button text
+darkModeToggle.textContent = isDarkMode ? '🌙' : '☀️';
+
+// Listen for system theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    if (!localStorage.getItem('theme')) {
+        if (e.matches) {
+            document.documentElement.classList.remove('light-mode');
+            darkModeToggle.textContent = '🌙';
+        } else {
+            document.documentElement.classList.add('light-mode');
+            darkModeToggle.textContent = '☀️';
+        }
+    }
 });
 
 // ===== NAVIGATION ACTIVE LINK =====
@@ -95,4 +114,5 @@ style.textContent = '.nav-link.active{color:#ff6b35;border-bottom:2px solid #ff6
 document.head.appendChild(style);
 
 console.log('Portfolio loaded ✓');
+console.log('Theme: ' + (isDarkMode ? 'Dark' : 'Light'));
 
