@@ -117,7 +117,7 @@
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-right">
-                <button id="darkModeToggle" class="theme-btn" aria-label="Toggle dark mode">🌙</button>
+                <button id="darkModeToggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
             </div>
         </div>
     </nav>
@@ -126,24 +126,92 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1 class="hero-title">Abdelrhman Shoman</h1>
-            <p class="hero-subtitle">Systems of Scale & Simplicity</p>
+            <p class="hero-subtitle">I Built a system behind Egypt's largest digital education program</p>
             <p class="hero-description">Operations | Automation | Intelligent Workflows</p>
             <div class="hero-cta">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
                 <a href="#contact" class="btn btn-secondary">Get in Touch</a>
             </div>
         </div>
+        <div class="hero-illustration">
+            <svg class="system-grid" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                <!-- Grid Lines -->
+                <defs>
+                    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+                        <path d="M 50 0 L 0 0 0 50" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/>
+                    </pattern>
+                </defs>
+                <rect width="500" height="500" fill="url(#grid)" />
+
+                <!-- Network Nodes -->
+                <circle class="node node-1" cx="100" cy="80" r="6" fill="white" opacity="0.4"/>
+                <circle class="node node-2" cx="200" cy="120" r="8" fill="white" opacity="0.5"/>
+                <circle class="node node-3" cx="350" cy="100" r="5" fill="white" opacity="0.3"/>
+                <circle class="node node-4" cx="150" cy="200" r="7" fill="white" opacity="0.45"/>
+                <circle class="node node-5" cx="320" cy="220" r="6" fill="white" opacity="0.35"/>
+                <circle class="node node-6" cx="250" cy="300" r="9" fill="white" opacity="0.5"/>
+                <circle class="node node-7" cx="400" cy="280" r="5" fill="white" opacity="0.3"/>
+                <circle class="node node-8" cx="180" cy="350" r="6" fill="white" opacity="0.4"/>
+
+                <!-- Connection Lines (Data Flow) -->
+                <line class="connection conn-1" x1="100" y1="80" x2="200" y2="120" stroke="white" stroke-width="1" opacity="0.15"/>
+                <line class="connection conn-2" x1="200" y1="120" x2="350" y2="100" stroke="white" stroke-width="1" opacity="0.15"/>
+                <line class="connection conn-3" x1="200" y1="120" x2="150" y2="200" stroke="white" stroke-width="1" opacity="0.15"/>
+                <line class="connection conn-4" x1="150" y1="200" x2="320" y2="220" stroke="white" stroke-width="1" opacity="0.15"/>
+                <line class="connection conn-5" x1="320" y1="220" x2="250" y2="300" stroke="white" stroke-width="1" opacity="0.15"/>
+                <line class="connection conn-6" x1="320" y1="220" x2="400" y2="280" stroke="white" stroke-width="1" opacity="0.15"/>
+                <line class="connection conn-7" x1="250" y1="300" x2="180" y2="350" stroke="white" stroke-width="1" opacity="0.15"/>
+                <line class="connection conn-8" x1="350" y1="100" x2="400" y2="280" stroke="white" stroke-width="1" opacity="0.1"/>
+
+                <!-- Data Packets (animated dots) -->
+                <circle class="data-packet packet-1" r="2" fill="#ff6b35" opacity="0.8">
+                    <animateMotion dur="4s" repeatCount="indefinite">
+                        <mpath href="#path1"/>
+                    </animateMotion>
+                </circle>
+                <circle class="data-packet packet-2" r="2" fill="#ff6b35" opacity="0.8">
+                    <animateMotion dur="5s" repeatCount="indefinite">
+                        <mpath href="#path2"/>
+                    </animateMotion>
+                </circle>
+                <circle class="data-packet packet-3" r="2" fill="#ff6b35" opacity="0.8">
+                    <animateMotion dur="6s" repeatCount="indefinite">
+                        <mpath href="#path3"/>
+                    </animateMotion>
+                </circle>
+
+                <!-- Hidden paths for animation -->
+                <defs>
+                    <path id="path1" d="M 100 80 L 200 120 L 150 200 L 320 220 L 250 300" fill="none"/>
+                    <path id="path2" d="M 200 120 L 350 100 L 400 280 L 320 220" fill="none"/>
+                    <path id="path3" d="M 150 200 L 320 220 L 250 300 L 180 350" fill="none"/>
+                </defs>
+            </svg>
+        </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
+        <div class="section-grid-bg">
+            <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="smallGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+                        <path d="M 30 0 L 0 0 0 30" fill="none" stroke="white" stroke-width="0.3" opacity="0.05"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#smallGrid)" />
+                <circle cx="200" cy="150" r="4" fill="white" opacity="0.2"/>
+                <circle cx="800" cy="200" r="4" fill="white" opacity="0.2"/>
+                <circle cx="1000" cy="500" r="4" fill="white" opacity="0.2"/>
+                <line x1="200" y1="150" x2="800" y2="200" stroke="white" stroke-width="0.5" opacity="0.1" stroke-dasharray="3,3"/>
+            </svg>
+        </div>
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-grid">
                 <div class="about-content">
                     <h3>The Art of Operational Design</h3>
-                    <p>I build systems that connect people, data, and processes. My work bridges automation with human efficiency — transforming large-scale operations into self-sustaining ecosystems.</p>
-                    <p>Whether it's a national education program or a remote AI startup, my mission is the same: <strong>make operations intelligent, measurable, and scalable.</strong></p>
+                    <p>Turning complex, large-scale systems into seamless, self-sustaining structures.</p>
                 </div>
                 <div class="about-values">
                     <div class="value-card">
@@ -173,6 +241,17 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
+        <div class="section-grid-bg">
+            <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="projectGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <circle cx="20" cy="20" r="1" fill="white" opacity="0.08"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#projectGrid)" />
+                <path d="M 100 400 Q 400 200, 700 400 T 1100 400" stroke="white" stroke-width="0.5" opacity="0.08" fill="none"/>
+            </svg>
+        </div>
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             
@@ -203,40 +282,76 @@
 
                 <div class="projects-list">
                     <div class="project-card">
-                        <img src="images/session-link-automation.png" alt="Session Link Automation" class="project-image">
-                        <h4>Session Link Automation</h4>
-                        <p>Power Automate system for Teams link generation.</p>
-                        <div class="impact-badge">Days → Hours</div>
+                        <div class="project-card-inner">
+                            <div class="card-icon">🧠</div>
+                            <h4>Session Link Automation System</h4>
+                            <p class="project-tool">Tool: Power Automate | Focus: Process Automation</p>
+                            <p class="project-brief">I built an automated workflow that generated, named, and distributed thousands of Microsoft Teams links for DECI's nationwide sessions. The system was fully integrated with attendance tracking tools, ensuring accuracy and speed.</p>
+                            <div class="impact-badge">Reduced link generation from several days to just hours</div>
+                            <div class="project-screenshot">
+                                <img src="https://via.placeholder.com/800x450/1a1a1a/ff6b35?text=Session+Link+Automation" alt="Session Link Automation System">
+                            </div>
+                        </div>
                     </div>
                     <div class="project-card">
-                        <div class="card-icon">📈</div>
-                        <h4>Smart Excel Validation</h4>
-                        <p>Real-time error detection for 40,000+ students.</p>
-                        <div class="impact-badge">90% error reduction</div>
+                        <div class="project-card-inner">
+                            <div class="card-icon">📊</div>
+                            <h4>Smart Excel Validation Framework</h4>
+                            <p class="project-tool">Tool: Advanced Excel | Focus: Data Accuracy & Scheduling</p>
+                            <p class="project-brief">To manage scheduling for 40,000+ students, I created an intelligent Excel framework that automatically flagged conflicts, duplicates, and missing data in real time.</p>
+                            <div class="impact-badge">Reduced scheduling errors by 90%+</div>
+                            <div class="project-screenshot">
+                                <img src="https://via.placeholder.com/800x450/1a1a1a/ff6b35?text=Excel+Validation+Framework" alt="Smart Excel Validation Framework">
+                            </div>
+                        </div>
                     </div>
                     <div class="project-card">
-                        <div class="card-icon">📖</div>
-                        <h4>Operations Manual</h4>
-                        <p>Complete DECI workflow documentation.</p>
-                        <div class="impact-badge">Official playbook</div>
+                        <div class="project-card-inner">
+                            <div class="card-icon">📘</div>
+                            <h4>DECI Operational Cycle Manual</h4>
+                            <p class="project-tool">Tool: Documentation & Process Mapping | Focus: Standardization</p>
+                            <p class="project-brief">I authored the official DECI Operational Manual, detailing every process from session setup to reporting and quality control.</p>
+                            <div class="impact-badge">Standardized workflows across teams</div>
+                            <div class="project-screenshot">
+                                <img src="https://via.placeholder.com/800x450/1a1a1a/ff6b35?text=Operations+Manual" alt="DECI Operational Cycle Manual">
+                            </div>
+                        </div>
                     </div>
                     <div class="project-card">
-                        <div class="card-icon">🧾</div>
-                        <h4>Certification Dashboard</h4>
-                        <p>Automated grading for 5,000+ projects.</p>
-                        <div class="impact-badge">24-hour issuance</div>
+                        <div class="project-card-inner">
+                            <div class="card-icon">🧾</div>
+                            <h4>Certification & Project Dashboard</h4>
+                            <p class="project-tool">Tool: Power Automate + Excel + SharePoint | Focus: Certification Workflow</p>
+                            <p class="project-brief">Developed an automated dashboard to evaluate, grade, and issue certificates for 5,000+ student projects simultaneously.</p>
+                            <div class="impact-badge">Certificate delivery within 24 hours</div>
+                            <div class="project-screenshot">
+                                <img src="https://via.placeholder.com/800x450/1a1a1a/ff6b35?text=Certification+Dashboard" alt="Certification & Project Dashboard">
+                            </div>
+                        </div>
                     </div>
                     <div class="project-card">
-                        <div class="card-icon">🔗</div>
-                        <h4>Session Coding & LMS</h4>
-                        <p>Docebo LMS integration system.</p>
-                        <div class="impact-badge">Seamless tracking</div>
+                        <div class="project-card-inner">
+                            <div class="card-icon">🧩</div>
+                            <h4>Session Coding & LMS Integration System</h4>
+                            <p class="project-tool">Tool: Docebo LMS + Excel Logic | Focus: Data Structuring</p>
+                            <p class="project-brief">Designed a session coding model embedding key metadata (governorate, area, vendor) into each record, then integrated it into Docebo LMS.</p>
+                            <div class="impact-badge">Enhanced session traceability</div>
+                            <div class="project-screenshot">
+                                <img src="https://via.placeholder.com/800x450/1a1a1a/ff6b35?text=LMS+Integration" alt="Session Coding & LMS Integration">
+                            </div>
+                        </div>
                     </div>
                     <div class="project-card">
-                        <div class="card-icon">👥</div>
-                        <h4>Team Management DB</h4>
-                        <p>Performance tracking database.</p>
-                        <div class="impact-badge">Full visibility</div>
+                        <div class="project-card-inner">
+                            <div class="card-icon">👥</div>
+                            <h4>Instructor & Coordinator Management Database</h4>
+                            <p class="project-tool">Tool: Excel + Power Automate | Focus: Workforce Analytics</p>
+                            <p class="project-brief">Built a centralized database tracking performance, onboarding, and quality scores for all instructors, coordinators, and supervisors.</p>
+                            <div class="impact-badge">Live visibility and data-driven decisions</div>
+                            <div class="project-screenshot">
+                                <img src="https://via.placeholder.com/800x450/1a1a1a/ff6b35?text=Team+Management+DB" alt="Instructor Management Database">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -249,41 +364,129 @@
 
                 <div class="projects-list">
                     <div class="project-card">
-                        <div class="card-icon">🧭</div>
-                        <h4>Quality Control</h4>
-                        <p>90%+ quality framework.</p>
-                        <div class="impact-badge">Consistency</div>
+                        <div class="project-card-inner">
+                            <div class="card-icon">⚙️</div>
+                            <h4>Company-Wide Quality Control System</h4>
+                            <p class="project-tool">Focus: Quality Management</p>
+                            <p class="project-brief">Developed the Session Quality Control Framework to define and enforce quality benchmarks for instructors, sessions, and learning content.</p>
+                            <div class="impact-badge">Achieved consistent quality scores above 90%</div>
+                            <div class="project-screenshot">
+                                <img src="https://via.placeholder.com/800x450/1a1a1a/ff6b35?text=Quality+Control+System" alt="Quality Control System">
+                            </div>
+                        </div>
                     </div>
                     <div class="project-card">
-                        <div class="card-icon">🧾</div>
-                        <h4>SOP Library</h4>
-                        <p>Comprehensive documentation.</p>
-                        <div class="impact-badge">Unified workflows</div>
+                        <div class="project-card-inner">
+                            <div class="card-icon">🧭</div>
+                            <h4>SOP Library & Operational Policy Framework</h4>
+                            <p class="project-tool">Focus: Process Standardization</p>
+                            <p class="project-brief">Authored comprehensive SOPs and operational policies for all departments, ensuring procedural clarity and alignment company-wide.</p>
+                            <div class="impact-badge">Reduced onboarding time and improved accountability</div>
+                            <div class="project-screenshot">
+                                <img src="https://via.placeholder.com/800x450/1a1a1a/ff6b35?text=SOP+Library" alt="SOP Library">
+                            </div>
+                        </div>
                     </div>
                     <div class="project-card">
-                        <div class="card-icon">💬</div>
-                        <h4>AI Feedback Tool</h4>
-                        <p>Intelligent feedback generation.</p>
-                        <div class="impact-badge">60% faster</div>
+                        <div class="project-card-inner">
+                            <div class="card-icon">💬</div>
+                            <h4>AI-Assisted Feedback Management Application</h4>
+                            <p class="project-tool">Focus: AI in Communication</p>
+                            <p class="project-brief">Built an AI-powered tool that structures and tones parent/student feedback automatically for clarity and professionalism.</p>
+                            <div class="impact-badge">Reduced response time by 60%</div>
+                            <div class="project-screenshot">
+                                <img src="https://via.placeholder.com/800x450/1a1a1a/ff6b35?text=AI+Feedback+Tool" alt="AI Feedback Management">
+                            </div>
+                        </div>
                     </div>
                     <div class="project-card">
-                        <div class="card-icon">🔍</div>
-                        <h4>Quality Review AI</h4>
-                        <p>Automated performance scoring.</p>
-                        <div class="impact-badge">90%+ evaluation</div>
+                        <div class="project-card-inner">
+                            <div class="card-icon">🔍</div>
+                            <h4>Automated Instructor Quality Review System</h4>
+                            <p class="project-tool">Focus: AI-Driven Evaluation</p>
+                            <p class="project-brief">Created an automation system that analyzes instructor performance per session and assigns real-time quality scores.</p>
+                            <div class="impact-badge">Maintained 90%+ instructor performance levels</div>
+                            <div class="project-screenshot">
+                                <img src="https://via.placeholder.com/800x450/1a1a1a/ff6b35?text=Quality+Review+AI" alt="Instructor Quality Review">
+                            </div>
+                        </div>
                     </div>
                     <div class="project-card">
-                        <div class="card-icon">🔗</div>
-                        <h4>Data Sync</h4>
-                        <p>Centralized data ecosystem.</p>
-                        <div class="impact-badge">Real-time decisions</div>
+                        <div class="project-card-inner">
+                            <div class="card-icon">🔗</div>
+                            <h4>Centralized Department Synchronization</h4>
+                            <p class="project-tool">Focus: Cross-Department Integration</p>
+                            <p class="project-brief">Linked live data from operations, marketing, HR, and sales through interconnected dashboards, ensuring unified decision-making.</p>
+                            <div class="impact-badge">Eliminated data silos</div>
+                            <div class="project-screenshot">
+                                <img src="https://via.placeholder.com/800x450/1a1a1a/ff6b35?text=Data+Synchronization" alt="Department Synchronization">
+                            </div>
+                        </div>
                     </div>
                     <div class="project-card">
-                        <div class="card-icon">🤖</div>
-                        <h4>AI Assistant</h4>
-                        <p>Internal AI support system.</p>
-                        <div class="impact-badge">Collaboration boost</div>
+                        <div class="project-card-inner">
+                            <div class="card-icon">🤖</div>
+                            <h4>AI Operational Agent</h4>
+                            <p class="project-tool">Focus: Knowledge Management</p>
+                            <p class="project-brief">Developed an internal AI assistant capable of retrieving SOPs, answering queries, and supporting sales/marketing operations.</p>
+                            <div class="impact-badge">Reduced internal search time</div>
+                            <div class="project-screenshot">
+                                <img src="https://via.placeholder.com/800x450/1a1a1a/ff6b35?text=AI+Operational+Agent" alt="AI Operational Agent">
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements">
+        <div class="section-grid-bg">
+            <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="achievementGrid" width="50" height="50" patternUnits="userSpaceOnUse">
+                        <path d="M 50 0 L 0 0 0 50" fill="none" stroke="white" stroke-width="0.3" opacity="0.06"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#achievementGrid)" />
+                <circle cx="300" cy="300" r="150" fill="none" stroke="white" stroke-width="0.5" opacity="0.05"/>
+                <circle cx="900" cy="500" r="120" fill="none" stroke="white" stroke-width="0.5" opacity="0.05"/>
+            </svg>
+        </div>
+        <div class="container">
+            <h2 class="section-title">Achievements & Leadership Impact</h2>
+            <p class="section-intro">At iSky Tech, I've led multiple large-scale education and training projects across different sectors — each with its own operational challenges, audience needs, and system requirements. My goal has always been the same: to design frameworks that make teams more connected, processes more transparent, and outcomes more measurable.</p>
+
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">🔹</div>
+                    <h4>AlNas Hospital – Early STEM Training for Children</h4>
+                    <p>Led a specialized educational program for around 40 young learners, hosted at AlNas Hospital in collaboration with iSky Tech.</p>
+                    <p>I coordinated closely with the content, marketing, and sales teams to align the curriculum, communication strategy, and logistics.</p>
+                    <p>The project successfully introduced children to early STEM and coding concepts, while strengthening interdepartmental collaboration within iSky through structured planning and shared systems.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🔹</div>
+                    <h4>AlNahwa School – Building a Digital Learning System</h4>
+                    <p>At AlNahwa School, I supervised the rollout of iSky's digital learning and student management framework, helping the school transition from manual attendance and tracking to a more automated structure.</p>
+                    <p>Through this project, the school achieved smoother coordination among teachers and improved data visibility, cutting administrative work by over 30%.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🔹</div>
+                    <h4>UAE AI Camp – National-Level Youth Empowerment</h4>
+                    <p>Worked under the Ministry of State for Artificial Intelligence, UAE, as part of iSky's leadership team delivering the UAE AI Camp — a large-scale initiative aimed at empowering youth through coding and AI education.</p>
+                    <p>I managed the operational side of the program, ensuring alignment between content, instructor management, and session logistics across all participating locations.</p>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="achievement-icon">🔹</div>
+                    <h4>Leadership & Operational Excellence at iSky</h4>
+                    <p>Within iSky's Quality and Operations Team, I led a group of employees to streamline internal processes and enhance collaboration between departments.</p>
+                    <p>By developing structured workflows, progress-tracking dashboards, and shared templates, I helped the team work more efficiently and align around measurable goals.</p>
+                    <p>These improvements led to a 20% increase in overall performance, and I was recognized by management for fostering a culture of clarity, accountability, and proactive teamwork.</p>
                 </div>
             </div>
         </div>
@@ -291,6 +494,23 @@
 
     <!-- Skills Section -->
     <section class="skills">
+        <div class="section-grid-bg">
+            <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="skillsGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.3" opacity="0.06"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#skillsGrid)" />
+                <circle cx="150" cy="150" r="4" fill="white" opacity="0.2"/>
+                <circle cx="450" cy="200" r="4" fill="white" opacity="0.2"/>
+                <circle cx="750" cy="180" r="4" fill="white" opacity="0.2"/>
+                <circle cx="1050" cy="220" r="4" fill="white" opacity="0.2"/>
+                <line x1="150" y1="150" x2="450" y2="200" stroke="white" stroke-width="0.5" opacity="0.1" stroke-dasharray="3,3"/>
+                <line x1="450" y1="200" x2="750" y2="180" stroke="white" stroke-width="0.5" opacity="0.1" stroke-dasharray="3,3"/>
+                <line x1="750" y1="180" x2="1050" y2="220" stroke="white" stroke-width="0.5" opacity="0.1" stroke-dasharray="3,3"/>
+            </svg>
+        </div>
         <div class="container">
             <h2 class="section-title">Core Competencies</h2>
             <div class="skills-grid">
@@ -336,6 +556,17 @@
 
     <!-- Blog Section -->
     <section id="blog" class="blog">
+        <div class="section-grid-bg">
+            <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="blogGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+                        <circle cx="30" cy="30" r="0.5" fill="white" opacity="0.1"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#blogGrid)" />
+                <circle cx="600" cy="400" r="200" fill="none" stroke="white" stroke-width="0.5" opacity="0.05" stroke-dasharray="5,5"/>
+            </svg>
+        </div>
         <div class="container">
             <h2 class="section-title">Latest Articles</h2>
             <div class="blog-grid">
@@ -372,6 +603,19 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
+        <div class="section-grid-bg">
+            <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="contactGrid" width="45" height="45" patternUnits="userSpaceOnUse">
+                        <path d="M 45 0 L 0 0 0 45" fill="none" stroke="white" stroke-width="0.3" opacity="0.08"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#contactGrid)" />
+                <line x1="200" y1="400" x2="1000" y2="400" stroke="white" stroke-width="0.5" opacity="0.08" stroke-dasharray="10,5"/>
+                <circle cx="200" cy="400" r="5" fill="white" opacity="0.2"/>
+                <circle cx="1000" cy="400" r="5" fill="white" opacity="0.2"/>
+            </svg>
+        </div>
         <div class="container">
             <h2 class="section-title">Let's Work Together</h2>
             <p class="contact-intro">Open to collaborations, consulting, and automation projects.</p>
@@ -380,17 +624,17 @@
                 <div class="contact-item">
                     <span class="contact-icon">📧</span>
                     <h4>Email</h4>
-                    <a href="mailto:hello@abdelrhman.com">hello@abdelrhman.com</a>
+                    <a href="mailto:abdelrhman.shoman62@gmail.com">abdelrhman.shoman62@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <h4>Phone</h4>
+                    <a href="tel:+201010136574">+20 101 013 6574</a>
                 </div>
                 <div class="contact-item">
                     <span class="contact-icon">💼</span>
                     <h4>LinkedIn</h4>
-                    <a href="https://linkedin.com" target="_blank">Connect</a>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">💻</span>
-                    <h4>GitHub</h4>
-                    <a href="https://github.com" target="_blank">Projects</a>
+                    <a href="https://www.linkedin.com/in/abdelrhman-mohamed-nabil" target="_blank">Connect</a>
                 </div>
                 <div class="contact-item">
                     <span class="contact-icon">📄</span>
